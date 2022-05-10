@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".steps"
+    style="@style/StepScreen">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/reload"
+        android:padding="10dp"
+        android:src="@drawable/reload_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="18dp"
+        style="@style/StepCounter"
+        android:text="@string/steps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="118dp"
+        android:src="@drawable/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/main_page_button_normal"
+        style="@style/MainScreenButton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/routeButton"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/main_page_button"
+            android:clickable="true"
+            android:theme="@style/StepScreenButton">
+
+            <ImageView
+                android:id="@+id/routeIcon"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:contentDescription="@string/routes"
+                android:scaleType="centerInside"
+                android:src="@drawable/person_walking_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/routeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="52dp"
+                android:text="@string/routes"
+                android:textColor="@color/yellow_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/routeIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/routeIcon"
+                app:layout_constraintTop_toTopOf="@+id/routeIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shortInfoButton"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:background="@drawable/main_page_button"
+            android:clickable="true"
+            android:layout_marginBottom="18dp"
+            android:theme="@style/StepScreenButton">
+
+            <ImageView
+                android:id="@+id/shortInfoIcon"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="23dp"
+                android:contentDescription="@string/short_info"
+                android:scaleType="centerInside"
+                android:src="@drawable/list_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/shortInfoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="52dp"
+                android:text="@string/short_info"
+                android:textColor="@color/dark_green"
+                app:layout_constraintBottom_toBottomOf="@+id/shortInfoIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/shortInfoIcon"
+                app:layout_constraintTop_toTopOf="@+id/shortInfoIcon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toEndOf="@+id/shortInfoText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infoButton"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:background="@drawable/main_page_button"
+            android:clickable="true"
+
+            android:theme="@style/StepScreenButton">
+
+            <ImageView
+                android:id="@+id/infoIcon"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="23dp"
+                android:contentDescription="@string/info"
+                android:scaleType="centerInside"
+                android:src="@drawable/info_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="52dp"
+                android:text="@string/info"
+                android:textColor="@color/dark_teal"
+                app:layout_constraintBottom_toBottomOf="@+id/infoIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/infoIcon"
+                app:layout_constraintTop_toTopOf="@+id/infoIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
